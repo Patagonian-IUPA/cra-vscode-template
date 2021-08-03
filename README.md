@@ -6,10 +6,10 @@ git clone https://github.com/Patagonian-IUPA/cra-vscode-template.git
 cd cra-vscode-template
 
 # Install...
-yarn install
+npm install
 
 # Start..
-yarn start
+npm start
 ```
 
 # Switch live
