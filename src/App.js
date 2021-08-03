@@ -9,7 +9,7 @@ function App() {
   const [theme, setTheme] = useState(themes.DarkA);
 
   return (
-    <div className={classnames(styles.App, theme)}>
+    <div className={classnames(theme, styles.AppTheme, styles.App)}>
       <button
         onClick={() => {
           if (theme === DarkA) {

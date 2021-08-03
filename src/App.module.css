@@ -5,16 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  color: var(--theme-color);
-  background-color: var(--theme-bgcolor);
-
-  transition: background-color 1s, color 1s;
 }
 
-/* 
-@media (min-width: 768px) {
-  .App {
-    background-color: chocolate;
-  }
-} */
+.AppTheme {
+  color: var(--theme-color);
+  background-color: var(--theme-bgcolor);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-out;
+}
