@@ -12,18 +12,22 @@ npm install
 npm start
 ```
 
-# Switch live
+# Cambiar de rama
 
 ```bash
-# cambiar a la rama "live" (clase 1)
+git remote update
+# Esto hace que nuestra copia local del repo actualize la lista de ramas disponibles.
+# Una vez hecho esto podemos facilmente pasar de rama en rama
+
 git checkout live
+# cambiar a la rama "live" (clase 1)
 
-# cambiar a la rama "live" (clase 2)
 git checkout live2
+# cambiar a la rama "live" (clase 2)
 
-# cambiar a la rama "themes" (resultado final)
 git checkout themes
+# cambiar a la rama "themes" (resultado final)
 
-# traer últimos cambios de la rama actual
 git pull
+# traer los últimos cambios de la rama actual
 ```
