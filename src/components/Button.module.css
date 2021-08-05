@@ -8,3 +8,15 @@
   line-height: 24px;
   transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
+
+.regular {
+  background-color: #fff;
+  color: #363636;
+  border: 1px solid #dbdbdb;
+}
+
+.primary {
+  background-color: #00d1b2;
+  color: #fff;
+  border: 1px solid transparent;
+}
