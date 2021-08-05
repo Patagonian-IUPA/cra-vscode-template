@@ -1,0 +1,24 @@
+.ThemeSelect {
+  margin: 0.5em 0;
+  padding: 0.2em 0.3em;
+  margin: 1em 0;
+}
+
+.ThemeRadioContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em 0;
+}
+
+.ThemeRadioItem {
+  margin: 5px;
+}
+
+.ThemeRadioItem input {
+  cursor: pointer;
+}
+
+.ThemeRadioItem label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

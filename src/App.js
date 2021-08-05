@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
+import Button from './themes/components/Button';
+import { ThemeRadio } from './themes/selectors/ThemeRadio';
 import styles from './App.module.css';
-import classnames from 'classnames';
-import themes from './themes/Themes.module.css';
-
-const { DarkA, DarkB } = themes;
-
-function App() {
-  const [theme, setTheme] = useState(themes.DarkA);
+const App = () => {
+  const [theme, setTheme] = useState();
 
   return (
-    <div className={classnames(theme, styles.AppTheme, styles.App)}>
-      <button
-        onClick={() => {
-          if (theme === DarkA) {
-            setTheme(DarkB);
-          } else {
-            setTheme(DarkA);
-          }
-        }}
-      >
-        {theme}
-      </button>
-      <div>Hello</div>
+    <div className={styles.App}>
+      <ThemeRadio theme={theme} onThemeChange={setTheme} />
+      <div className={styles.Buttons}>
+        <Button theme={theme} style={{ margin: '.5em' }}>
+          Regular
+        </Button>
+        <Button theme={theme} style={{ margin: '.5em' }} type="primary">
+          Primary
+        </Button>
+        <Button theme={theme} style={{ margin: '.5em' }} type="warning">
+          Warning
+        </Button>
+        <Button theme={theme} style={{ margin: '.5em' }} type="danger">
+          Danger
+        </Button>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
