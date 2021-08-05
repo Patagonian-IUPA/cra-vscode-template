@@ -1,0 +1,10 @@
+.base {
+  border: 1px solid #dbdbdb;
+  cursor: pointer;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  vertical-align: top;
+  line-height: 24px;
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
