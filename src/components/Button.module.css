@@ -1,3 +1,4 @@
+
 .base {
   border: 1px solid #dbdbdb;
   cursor: pointer;
@@ -10,9 +11,9 @@
 }
 
 .regular {
-  background-color: #fff;
-  color: #363636;
-  border: 1px solid #dbdbdb;
+  background-color: var(--regular-bg-color);
+  color: var(--regular-color);
+  border: 1px solid var(--regular-border-color);
 }
 
 .primary {

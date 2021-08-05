@@ -1,0 +1,12 @@
+.ThemeA {
+  --regular-bg-color: #fff;
+  --regular-color: #363636;
+  --regular-border-color: #dbdbdb;
+
+  --primary-bg-color: #00d1b2;
+  --primary-color: #fff;
+  --primary-border-color: transparent;
+}
+
+.ThemeB {
+}
