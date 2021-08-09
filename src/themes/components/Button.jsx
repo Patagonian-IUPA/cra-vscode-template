@@ -10,7 +10,10 @@ export const Button = ({
   ...rest
 }) => {
   return (
-    <button className={classNames(style.base, theme, style[type])} {...rest} />
+    <button
+      className={classNames(style.base, theme, style[type], className)}
+      {...rest}
+    />
   );
 };
 
