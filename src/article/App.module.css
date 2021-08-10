@@ -1,0 +1,62 @@
+.UserPostScreen {
+  --row-width: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+.UserPost {
+  width: var(--row-width);
+}
+
+.CommentsSection {
+  width: calc(var(--row-width) - 5%);
+}
+
+.CreateCommentForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.CreateCommentTextarea {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.CreateCommentActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.CreateCommentActionsButton {
+  margin: 0.5em 0 0.5em 0.5em;
+}
+
+.SingleComment {
+  margin-bottom: 2em;
+}
+
+.VoteButton {
+  margin: 0 0.5em 0 0;
+}
+
+.VoteButton * {
+  vertical-align: middle;
+}
+
+.VoteButton svg {
+  width: 1em;
+  height: 1em;
+}
+
+.VoteButton svg rect {
+  fill: none;
+}
+
+.VoteUpButton svg path {
+  fill: var(--button-primary-color);
+}
+
+.VoteDownButton svg path{
+  fill: var(--button-danger-color);
+}
