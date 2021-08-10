@@ -1,18 +1,18 @@
-.UserPostScreen {
+.ArticleScreen {
   --row-width: 75%;
   display: flex;
   justify-content: center;
 }
 
-.UserPost {
+.Article {
   width: var(--row-width);
 }
 
-.CommentsSection {
+.Comments {
   width: calc(var(--row-width) - 5%);
 }
 
-.CreateCommentForm {
+.CreateComment {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -32,7 +32,7 @@
   margin: 0.5em 0 0.5em 0.5em;
 }
 
-.SingleComment {
+.UserComment {
   margin-bottom: 2em;
 }
 

@@ -5,7 +5,7 @@ import ThumbsDown from './ThumbsDown';
 import style from './App.module.css';
 import classNames from 'classnames';
 
-const PostContent = () => {
+const ArticleBody = () => {
   return (
     <>
       <h1>Article Title</h1>
@@ -50,7 +50,7 @@ export const ButtonVoteDown = ({ votes }) => {
   );
 };
 
-export const VoteButtons = ({ votesUp, votesDown }) => {
+export const UserCommentActions = ({ votesUp, votesDown }) => {
   return (
     <div>
       <ButtonVoteUp votes={votesUp} />
@@ -59,19 +59,19 @@ export const VoteButtons = ({ votesUp, votesDown }) => {
   );
 };
 
-export const SingleComment = ({ comment }) => {
+export const UserComment = ({ comment }) => {
   return (
-    <div className={style.SingleComment}>
+    <div className={style.UserComment}>
       <div>Author: {comment.author}</div>
       <div>
         <p>{comment.content}</p>
       </div>
-      <VoteButtons votesUp={comment.votesUp} votesDown={comment.votesDown} />
+      <UserCommentActions votesUp={comment.votesUp} votesDown={comment.votesDown} />
     </div>
   );
 };
 
-export const PostComments = () => {
+export const UserComments = () => {
   const comments = [
     {
       author: 'Juanma',
@@ -93,7 +93,7 @@ export const PostComments = () => {
     <div>
       {comments.map((comment, idx) => {
         return (
-          <SingleComment key={`${comment.author}-${idx}`} comment={comment} />
+          <UserComment key={`${comment.author}-${idx}`} comment={comment} />
         );
       })}
     </div>
@@ -125,12 +125,12 @@ const CreateCommentActions = () => {
   );
 };
 
-const CreateCommentForm = () => {
+const CreateComment = () => {
   return (
     <form
       action="/create-comment"
       method="POST"
-      className={style.CreateCommentForm}
+      className={style.CreateComment}
       onSubmit={(e) => e.preventDefault()}
     >
       <CreateCommentTextArea />
@@ -139,34 +139,34 @@ const CreateCommentForm = () => {
   );
 };
 
-const CommentsSection = () => {
+const Comments = () => {
   return (
-    <div className={style.CommentsSection}>
-      <CreateCommentForm />
-      <PostComments />
+    <div className={style.Comments}>
+      <CreateComment />
+      <UserComments />
     </div>
   );
 };
 
-const UserPost = () => {
+const Article = () => {
   return (
-    <div className={style.UserPost}>
-      <PostContent />
-      <CommentsSection />
+    <div className={style.Article}>
+      <ArticleBody />
+      <Comments />
     </div>
   );
 };
 
-const UserPostScreen = () => {
+const ArticleScreen = () => {
   return (
-    <div className={classNames(style.UserPostScreen)}>
-      <UserPost />
+    <div className={classNames(style.ArticleScreen)}>
+      <Article />
     </div>
   );
 };
 
 const App = () => {
-  return <UserPostScreen />;
+  return <ArticleScreen />;
 };
 
 export default App;
