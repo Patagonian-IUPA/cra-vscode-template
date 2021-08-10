@@ -1,6 +1,6 @@
 import React from 'react';
 import cl from 'classnames';
-import themes from './themes.module.css';
+// import themes from './themes.module.css';
 import styles from './Button.module.css';
 
 export const Button = ({ type, className, ...rest }) => {
@@ -9,7 +9,7 @@ export const Button = ({ type, className, ...rest }) => {
 
   return (
     <button
-      className={cl(styles.base, themes.ThemeA, claseTipo, className)}
+      className={cl(styles.base, claseTipo, className)}
       {...rest}
     />
   );
