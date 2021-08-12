@@ -1,0 +1,11 @@
+.TopNavbar {
+  color: floralwhite;
+  height: 50px;
+  background-color: var(--button-danger-bgcolor);
+  border-bottom: 1px solid #fbfbfb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
