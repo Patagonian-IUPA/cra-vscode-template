@@ -1,13 +1,9 @@
-.ThemeSelect {
-  margin: 0.5em 0;
-  padding: 0.2em 0.3em;
-  margin: 1em 0;
-}
+/* radio */
 
 .ThemeRadioContainer {
   display: flex;
   flex-direction: row;
-  margin: 0.5em 0;
+  margin: 1em 0;
 }
 
 .ThemeRadioItem {
@@ -21,4 +17,20 @@
 .ThemeRadioItem label:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* select */
+
+.ThemeSelect {
+  margin: 1em 0;
+  padding: 0.2em 0.3em;
+  margin: 1em 0;
+  width: 150px;
+  font-weight: bold;
+}
+
+/* range */
+
+.ThemeRange {
+  margin: 1em 0;
 }

@@ -1,27 +1,21 @@
 import React, { useState } from 'react';
-import Button from './themes/components/Button';
 import { ThemeRadio } from './themes/selectors/ThemeRadio';
 import styles from './App.module.css';
+import Themes from './themes/Themes.module.css';
+import classNames from 'classnames';
+import ButtonsGroup from './themes/components/ButtonsGroup';
+import { ThemeSelect } from './themes/selectors/ThemeSelect';
+import ThemeRange from './themes/selectors/ThemeRange';
+
 const App = () => {
-  const [theme, setTheme] = useState();
+  const [theme, setTheme] = useState(Themes.ThemeA);
 
   return (
-    <div className={styles.App}>
+    <div className={classNames(styles.App, theme)}>
       <ThemeRadio theme={theme} onThemeChange={setTheme} />
-      <div className={styles.Buttons}>
-        <Button theme={theme} style={{ margin: '.5em' }}>
-          Regular
-        </Button>
-        <Button theme={theme} style={{ margin: '.5em' }} type="primary">
-          Primary
-        </Button>
-        <Button theme={theme} style={{ margin: '.5em' }} type="warning">
-          Warning
-        </Button>
-        <Button theme={theme} style={{ margin: '.5em' }} type="danger">
-          Danger
-        </Button>
-      </div>
+      <ThemeRange theme={theme} onThemeChange={setTheme} />
+      <ThemeSelect theme={theme} onThemeChange={setTheme} />
+      <ButtonsGroup />
     </div>
   );
 };

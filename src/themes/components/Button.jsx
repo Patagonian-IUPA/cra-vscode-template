@@ -1,17 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import style from './Button.module.css';
-import themes from '../Themes.module.css';
 
-export const Button = ({
-  theme = themes.ThemeA,
-  type = 'regular',
-  className = '',
-  ...rest
-}) => {
+export const Button = ({ type = 'regular', className = '', ...rest }) => {
   return (
     <button
-      className={classNames(style.base, theme, style[type], className)}
+      className={classNames(style.base, style[type], className)}
       {...rest}
     />
   );

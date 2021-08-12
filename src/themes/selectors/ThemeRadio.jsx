@@ -1,11 +1,14 @@
 import React from 'react';
 import styles from './styles.module.css';
 import themeClassNames from '../Themes.module.css';
-
-export const ThemeRadio = ({
-  theme = themeClassNames.ThemeA,
-  onThemeChange = (theme) => console.info(theme),
-}) => {
+/**
+ * Selector the themes de tipo "radio".
+ *
+ * - Recibe `theme`: que le indica a este componente cual es el theme actualmente en uso.
+ * - Recibe `onThemeChange`: una función (callback) que será *llamada* pasándole
+ * como parámetro el theme que el usuario está intentado elegir.
+ */
+export const ThemeRadio = ({ theme, onThemeChange }) => {
   return (
     <div className={styles.ThemeRadioContainer}>
       <div className={styles.ThemeRadioItem}>
